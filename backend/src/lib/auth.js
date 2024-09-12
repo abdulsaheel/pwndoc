@@ -1,7 +1,7 @@
 // Dynamic generation of JWT Secret if not exist (different for each environnment)
 var fs = require('fs')
-var env = process.env.NODE_ENV || 'dev'
-var config = require('../config/config.json')
+var env = process.env.NODE_ENV || 'prod'
+var config = require('../configuration/configuration.json')
 
 if (!config[env].jwtSecret) {
     config[env].jwtSecret = require('crypto').randomBytes(32).toString('hex')
