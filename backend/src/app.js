@@ -27,7 +27,7 @@ var utils = require('./lib/utils');
 
 // Get configuration
 var env = process.env.NODE_ENV || 'dev';
-const config = require('./config/config.json');
+const config = require('./configuration/configuration.json');
 global.__basedir = __dirname;
 
 // Database connection
