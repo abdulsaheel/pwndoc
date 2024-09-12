@@ -37,7 +37,7 @@ mongoose.Promise = global.Promise;
 // Trim all Strings
 mongoose.Schema.Types.String.set('trim', true);
 
-mongoose.connect('mongodb://mongo-pwndoc:27017/pwndoc', {
+mongoose.connect('mongodb://127.0.0.1:27017/pwndoc', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 30000, // Timeout after 30 seconds instead of 10 seconds
