@@ -37,7 +37,9 @@ mongoose.Promise = global.Promise;
 // Trim all Strings
 mongoose.Schema.Types.String.set('trim', true);
 
-mongoose.connect(`mongodb://${config.database.server}:${config.database.port}/${config.database.name}`, {});
+mongoose.connect('mongodb://mongo-pwndoc:27017/pwndoc', {})
+  .then(() => console.log('MongoDB connected to production database'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 // Models import
 require('./models/user');
