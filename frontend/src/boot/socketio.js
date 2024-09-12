@@ -3,7 +3,7 @@ import { Loading } from 'quasar'
 import { $t } from '@/boot/i18n'
 
 export default ({ Vue }) => {
-    var socketUrl = "https://127.0.0.1:4242";
+    var socketUrl = "http://127.0.0.1:4242";
     var socket = io(socketUrl);
 
     socket.on('disconnect', (error) => {
