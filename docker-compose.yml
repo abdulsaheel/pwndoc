@@ -24,7 +24,7 @@ services:
       - mongodb
     restart: always
     ports:
-      - 0.0.0.0:4242:4242
+      - 4242:4242
     links:
       - mongodb
     networks: 
