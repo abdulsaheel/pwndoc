@@ -119,8 +119,13 @@ app.get("*", function(req, res) {
 });
 
 // Start server
-http.listen(config.port, config.host, () => {
-  console.log(`Server running on http://${config.host}:${config.port}`);
+// Set defaults if config is missing
+const host = config.host || '0.0.0.0';
+const port = config.port || 4242;
+
+// Start server
+http.listen(port, host, () => {
+  console.log(`Server running on http://${host}:${port}`);
 });
 
 module.exports = app;
