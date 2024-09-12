@@ -37,8 +37,9 @@ mongoose.Promise = global.Promise;
 // Trim all Strings
 mongoose.Schema.Types.String.set('trim', true);
 
-mongoose.connect(`mongodb://mongodb:27017/pwndoc`, { useNewUrlParser: true, useUnifiedTopology: true });
-
+mongoose.connect(`mongodb://mongodb:27017/pwndoc`, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected successfully'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 // Models import
 require('./models/user');
